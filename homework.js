@@ -53,7 +53,6 @@ function fahrenheitToCelsius(fahrenheit){
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
 
-
 function celsiusToFahrenheit(celsius){
   const cTemp = celsius;
   //Celsius to Fahrenheit : (°C × 1.8) + 32 = °F
