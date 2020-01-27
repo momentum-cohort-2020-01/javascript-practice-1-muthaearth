@@ -1,26 +1,65 @@
 // 1. Set the variable `givenName` to the string "Addison".
+let givenName = "Addison"
 
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
+const candies = 20
+const people = 6
+const leftover = candies % people
 
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
+
+    function greeting (name) {
+      return "Hello, " + name + "!";
+    }
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 
+function isOdd(number){
+if (number % 2 === 1) {
+  return true
+} else if (number % 2 === -1) {
+  return true
+} else return false
+}
+
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
 // number which, when divided by 2, has a remainder of 0.
+
+function isEven(number){
+if (number % 2 === 0) {
+  return true
+} else return false
+}
 
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
 
+function fahrenheitToCelsius(fahrenheit){
+  const fTemp = fahrenheit;
+  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
+  const fahrenheit = (fTemp - 32) * 5 / 9;
+  return fahrenheit
+}
+
+
+
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
+
+
+function celsiusToFahrenheit(celsius){
+  const cTemp = celsius;
+  //Celsius to Fahrenheit : (°C × 1.8) + 32 = °F
+  const celsius = cTemp * 9 / 5 + 32;
+  return celsiusToFahrenheit
+}
 
 // 7. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -28,6 +67,21 @@
 // fahrenheitToCelsius function.
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
+
+function fahrenheitToKelvin(kelvin){
+  const fTemp = kelvin;
+  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
+  const kelvin = (fTemp - 32) * 5 / 9;
+  return kelvin
+}
+
+function fahrenheitToCelsius(fahrenheit){
+  const fTemp = fahrenheit;
+  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
+  const fahrenheit = (fTemp - 32) * 5 / 9;
+  return fahrenheit
+}
+
 
 // 8. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
