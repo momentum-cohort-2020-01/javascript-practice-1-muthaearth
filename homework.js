@@ -69,23 +69,21 @@ function celsiusToFahrenheit(celsius){
 // 1 degree Kelvin equals 1 degree Celsius.
 
 function fahrenheitToKelvin(kelvin){
-  const fTemp = kelvin;
-  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
-  const kelvin = (fTemp - 32) * 5 / 9;
-  return kelvin
+  //Absolute zero (0 K) is equivalent to −273.15 C
+  return fahrenheitToCelsius (fahrenheit) + 273.15
 }
-
-function fahrenheitToCelsius(fahrenheit){
-  const fTemp = fahrenheit;
-  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
-  const fahrenheit = (fTemp - 32) * 5 / 9;
-  return fahrenheit
-}
-
 
 // 8. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
+
+function lesser (num1, num2){
+  num1=10;
+  num2=13;
+  if (num1 < num2) {
+    return num1
+  } else return num2
+}
 
 // 9. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -98,6 +96,32 @@ function fahrenheitToCelsius(fahrenheit){
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
+
+
+
+function multigreeting(lang, name){
+  loop(lang = ""; greeting = "Hello " + name) {
+    if (lang === ) {
+      exit loop;
+      // We have enough food; let's go home
+    } else {
+      food += 2; // Spend an hour collecting 2 more food
+      // loop will then run again
+    }
+  }
+  }
+
+
+
+loop(food = 0; foodNeeded = 10) {
+  if (food >= foodNeeded) {
+    exit loop;
+    // We have enough food; let's go home
+  } else {
+    food += 2; // Spend an hour collecting 2 more food
+    // loop will then run again
+  }
+}
 
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
