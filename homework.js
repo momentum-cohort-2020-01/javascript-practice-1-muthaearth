@@ -14,9 +14,9 @@ console.log(leftover) //output Hello, Amy!
 // where <name> is the name given as an argument to the function.
 
 function greeting(name) {
-  console.log("Hello, " + name + "!")
+  return "Hello, " + name + "!"
+  // console.log("Hello, " + name + "!")
 }; 
-greeting("Amy")//output Hello, Amy!
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
@@ -24,11 +24,13 @@ greeting("Amy")//output Hello, Amy!
 
 function isOdd(number) {
   if (number % 2 == 1 || number % 2 == -1) {
-     console.log("true");
+    return true;
+    // console.log("true");
  }
- console.log("false");
+    else return false;
+    // console.log("false");
 }
-isOdd(12); //output false
+isOdd(12) //output false
 
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
@@ -36,11 +38,12 @@ isOdd(12); //output false
 
 function isEven(number){
 if (number % 2 == 0) {
-  console.log("true");
+  return true;
+  // console.log("true");
 } 
-  console.log("false");
+  return false;
+  // console.log("false");
 }
-isEven(13); //output false
 
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -49,24 +52,17 @@ isEven(13); //output false
 function fahrenheitToCelsius(fahrenheit){
   var fTemp = fahrenheit;
   var fahr2cel = (fTemp - 32) * 5 / 9;
-  console.log(fahr2cel);
+  return fahr2cel
+  // console.log(fahr2cel);
 }
-fahrenheitToCelsius(45) //output 7.2222222
-
 
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
 
-function celciusToFahrenheit(number) {
-  return number * (9/5);
-};
-
-function getFahr(celsius) {
-  return celciusToFahrenheit(celsius) + 32;
-};
-
-getFahr(15); // output 59
+function celsiusToFahrenheit(number) {
+  return number * (9/5) + 32
+}
 
 // 7. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -75,9 +71,9 @@ getFahr(15); // output 59
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
 
-function fahrenheitToKelvin(kelvin){
-  //Absolute zero (0 K) is equivalent to −273.15 C
-  return fahrenheitToKelvin (fahrenheit) + 273.15
+function fahrenheitToKelvin(fahr){
+  let f2Cel = fahrenheitToCelsius(fahr)
+  return f2Cel + 273.15
 }
 
 // 8. Create a function called lesser that takes two numbers as
@@ -86,21 +82,9 @@ function fahrenheitToKelvin(kelvin){
 
 function lesser(num1, num2){
   if (num1 < num2) {
-    return (num1);
-  } else console.log("");
+    return num1;
+  } else return num2;
 };
-
-function getNum1(num1) {
-  return lesser(num1)
-};
-
-function getNum2(num2) {
-  return (num2)
-};
-
-getNum1 (56);
-getNum2(45);
-//output lesser of two values
 
 // 9. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -114,21 +98,18 @@ getNum2(45);
 //
 // If any other language code is used, return nothing.
 
-
-function multigreeting(name) {
-  name("Rebecca");
-  return name;
-};
-let language = 'en';
-if (language === 'es') {
-  console.log("¡Hola," + name + '!');
+function multigreeting(name, language) {
+if (language === 'en') {
+  return "Hello, " + name + '!';
+}
+  else if (language === 'es') {
+    return "¡Hola, " + name + '!';
 } else if (language === 'fr') {
-  console.log("Bonjour," + name + '!');
+  return "Bonjour, " + name + '!';
 } else if (language === 'eo') {
-  console.log("Saluton," + name + '!');
-} else {
-  console.log("Hello," + name + '!');
-};
+  return "Saluton, " + name + '!';
+}
+}
 
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
@@ -156,3 +137,26 @@ if (language === 'es') {
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
+function gcd(a, b){
+  let d = 0
+  //if a and b both are evenly divided by two
+  while (a % 2 === 0 && b % 2 === 0) {
+    a = a / 2;
+    b = b / 2;
+    d++ //d serves as counter for the number of checks of whether these numbers are evenly divided
+  }
+  //while a is NOT equal to b
+  while (a != b) {
+    if (a % 2 === 0) {
+      a = a / 2
+    } else if (b % 2 === 0) {
+      b = b / 2
+    } else if (a > b) {
+      a = (a - b) / 2
+    } else b = (b - a) / 2
+  }
+  let g = a
+  //return g (aka a) times 2 to the d power (number of times first while loop runs)
+  return g * 2**d
+}
