@@ -1,30 +1,34 @@
 // 1. Set the variable `givenName` to the string "Addison".
-let givenName = "Addison"
+
+let givenName = "Addison";
+console.log(givenName); //output Addison
 
 // 2. Set candies equal to 20, people to 6, and leftover equal
 // to the remainder of dividing 20 by 6.
-const candies = 20
-const people = 6
-const leftover = candies % people
+const candies = 20;
+const people = 6;
+leftover = candies % people;
+console.log(leftover) //output Hello, Amy!
 
 // 3. Create a function called greeting that returns "Hello, <name>!",
 // where <name> is the name given as an argument to the function.
 
-    function greeting (name) {
-      return "Hello, " + name + "!";
-    }
+function greeting(name) {
+  console.log("Hello, " + name + "!");
+}
+greeting("Amy"); //output Hello, Amy!
 
 // 4. Create a function called isOdd that, given a number, will
 // return true if it is odd and false if it is not. An odd number is a
 // number which, when divided by 2, has a remainder of 1 or -1.
 
-function isOdd(number){
-if (number % 2 === 1) {
-  return true
-} else if (number % 2 === -1) {
-  return true
-} else return false
+function isOdd(number) {
+  if (number % 2 == 1 || number % 2 == -1) {
+     console.log("true");
+ }
+ console.log("false");
 }
+isOdd(12); //output false
 
 // 5. Create a function called isEven that, given a number, will
 // return true if it is even and false if it is not. An even number is a
@@ -32,33 +36,37 @@ if (number % 2 === 1) {
 
 function isEven(number){
 if (number % 2 === 0) {
-  return true
-} else return false
+  console.log("true");
+} 
+  console.log("false");
 }
+isEven(13); //output false
 
 // 6. Create a function called fahrenheitToCelsius that takes a
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
 
 function fahrenheitToCelsius(fahrenheit){
-  const fTemp = fahrenheit;
-  //Fahrenheit to Celsius : (°F − 32) ÷ 1.8 = °C 
-  const fahrenheit = (fTemp - 32) * 5 / 9;
-  return fahrenheit
+  var fTemp = fahrenheit;
+  var fahr2cel = (fTemp - 32) * 5 / 9;
+  console.log(fahr2cel);
 }
-
+fahrenheitToCelsius(45) //output 7.2222222
 
 
 // 6. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
 
-function celsiusToFahrenheit(celsius){
-  const cTemp = celsius;
-  //Celsius to Fahrenheit : (°C × 1.8) + 32 = °F
-  const celsius = cTemp * 9 / 5 + 32;
-  return celsiusToFahrenheit
-}
+function celciusToFahrenheit(number) {
+  return number * (9/5);
+};
+
+function getFahr(celsius) {
+  return celciusToFahrenheit(celsius) + 32;
+};
+
+getFahr(15); // output 59
 
 // 7. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -69,20 +77,30 @@ function celsiusToFahrenheit(celsius){
 
 function fahrenheitToKelvin(kelvin){
   //Absolute zero (0 K) is equivalent to −273.15 C
-  return fahrenheitToCelsius (fahrenheit) + 273.15
+  return fahrenheitToKelvin (fahrenheit) + 273.15
 }
 
 // 8. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
 
-function lesser (num1, num2){
-  num1=10;
-  num2=13;
+function lesser(num1, num2){
   if (num1 < num2) {
-    return num1
-  } else return num2
-}
+    return (num1);
+  } else console.log("");
+};
+
+function getNum1(num1) {
+  return lesser(num1)
+};
+
+function getNum2(num2) {
+  return (num2)
+};
+
+getNum1 (56);
+getNum2(45);
+//output lesser of two values
 
 // 9. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
@@ -95,6 +113,49 @@ function lesser (num1, num2){
 // eo - Saluton, <name>!
 //
 // If any other language code is used, return nothing.
+
+function multigreeting(name){
+  let name="Rebecca";
+};
+
+let language = 'en';
+if (language === 'es') {
+  console.log("¡Hola," + name + '!');
+} else if (language === 'fr') {
+  console.log("Bonjour," + name + '!');
+} else if (language === 'eo') {
+  console.log("Saluton," + name + '!');
+} else {
+  console.log("Hello," + name + '!');
+};
+function getLang(language){
+return getLang(language);
+};
+
+getlang("es");
+
+let stopLight = 'yellow';
+if (stopLight === 'red') {
+  console.log('Stop!');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down.');
+} else if (stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+
+
+
+
+
+
+function multigreeting() {
+  console.log('Hello, ');
+}
+function greetInSpanish() {
+  console.log('Buenas Tardes.');
+}
 
 
 
