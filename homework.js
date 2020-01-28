@@ -114,10 +114,11 @@ getNum2(45);
 //
 // If any other language code is used, return nothing.
 
-function multigreeting(name){
-  let name="Rebecca";
-};
 
+function multigreeting(name) {
+  name("Rebecca");
+  return name;
+};
 let language = 'en';
 if (language === 'es') {
   console.log("¡Hola," + name + '!');
@@ -128,60 +129,6 @@ if (language === 'es') {
 } else {
   console.log("Hello," + name + '!');
 };
-function getLang(language){
-return getLang(language);
-};
-
-getlang("es");
-
-let stopLight = 'yellow';
-if (stopLight === 'red') {
-  console.log('Stop!');
-} else if (stopLight === 'yellow') {
-  console.log('Slow down.');
-} else if (stopLight === 'green') {
-  console.log('Go!');
-} else {
-  console.log('Caution, unknown!');
-}
-
-
-
-
-
-
-function multigreeting() {
-  console.log('Hello, ');
-}
-function greetInSpanish() {
-  console.log('Buenas Tardes.');
-}
-
-
-
-function multigreeting(lang, name){
-  loop(lang = ""; greeting = "Hello " + name) {
-    if (lang === ) {
-      exit loop;
-      // We have enough food; let's go home
-    } else {
-      food += 2; // Spend an hour collecting 2 more food
-      // loop will then run again
-    }
-  }
-  }
-
-
-
-loop(food = 0; foodNeeded = 10) {
-  if (food >= foodNeeded) {
-    exit loop;
-    // We have enough food; let's go home
-  } else {
-    food += 2; // Spend an hour collecting 2 more food
-    // loop will then run again
-  }
-}
 
 // 10. The greatest common divisor (https://en.wikipedia.org/wiki/Greatest_common_divisor)
 // is the largest integer that, given two other integers, can be divided into them. For
